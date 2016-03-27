@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
+var compress = require('compression');
 
 app.set('port', (process.env.PORT || 5000));
+app.use(compress());
 
 app.use(
   "/",
